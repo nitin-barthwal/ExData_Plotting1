@@ -41,10 +41,11 @@ columnsWithMeanSTD <- grep(".*Mean.*|.*Std.*", names(completeData), ignore.case=
 requiredColumns <- c(columnsWithMeanSTD, 562, 563)
 dim(completeData)
 
+
 extractedData <- completeData[,requiredColumns]
 dim(extractedData)
 
-#3. Uses descriptive activity names to name the activities in the data set
+#3. Uses descriptive activity names to name the activities  in the data set
 extractedData$activity <- factor(extractedData$activity, labels=c("Walking",
   "Walking Upstairs", "Walking Downstairs", "Sitting", "Standing", "Laying"))
 
